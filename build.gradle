@@ -1,0 +1,10 @@
+task build (type : Exec) {
+    print 'Building private-compute-cloud:'
+    // There currently isn't any build necessary.
+    //
+    executable = "ls"
+    args "-lah"
+}
+task do_all {
+    build.execute();
+}
