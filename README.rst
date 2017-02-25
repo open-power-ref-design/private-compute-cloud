@@ -8,7 +8,7 @@ General information about Openstack Nova can be found at:
 
 This repository provides the following:
 
-    - `Bill of Materials <https://github.com/open-power-ref-design/private-compute-cloud/blob/master/private-compute-cloudpdf>`_
+    - `Bill of Materials (also used for DBaaS) <https://github.com/open-power-ref-design/dbaas/blob/master/dbaas.pdf>`_
     - `Deployment configuration file for private compute cloud <https://github.com/open-power-ref-design/private-compute-cloud/blob/master/private-cloud.yml>`_
     - `Deployment configuration file for private compute cloud w/swift <https://github.com/open-power-ref-design/private-compute-cloud/blob/master/private-cloud-with-swift-small.yml>`_
 
@@ -77,7 +77,7 @@ Getting Started
 The toolkit runs on an Ubuntu 16.04 OpenPOWER server or VM that is connected
 to the internet and management switch in the cluster to be configured.
 
-#. Read `private-compute-cloud.pdf <https://github.com/open-power-ref-design/private-compute-cloud/blob/master/private-compute-cloud.pdf>`_
+#. Read the `Bill of Materials (also used for DBaaS) <https://github.com/open-power-ref-design/dbaas/blob/master/dbaas.pdf>`_
 
 #. Choose a deployment configuration file w/ or w/o Swift
 
