@@ -406,9 +406,9 @@ Recipes for OpenPOWER servers are located here:
 
 Here, you will find several OpenStack based recipes:
 
-    - `Private cloud w/ and w/o Swift Object Storage <https://github.com/open-power-ref-design/private-compute-cloud/blob/master/README.rst>`_
     - `DBaaS <https://github.com/open-power-ref-design/dbaas/blob/master/README.rst>`_
     - `Standalone Ceph Clusters <https://github.com/open-power-ref-design/standalone-ceph/blob/master/README.rst>`_
+    - `Standalone Swift Clusters <https://github.com/open-power-ref-design/standalone-swift/blob/master/README.rst>`_
 
 The following projects provides services that are used as major building blocks in
 recipes:
