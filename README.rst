@@ -48,9 +48,11 @@ script that installs OpenStack, Ceph, et al. which is orchestrated by os-service
 More properly, in the bare metal installation step, only the installation tools
 for OpenStack and Ceph were installed, not the actual services.  The next step
 is to configure these tools, so that they install the actual services in a
-prescribed manner so that they fit properly in the data center.  The two
-projects are os-services and ceph-services.  See the README files of each project
-to determine what is required here.
+prescribed manner so that they fit properly in the data center.  The relevant
+projects are os-services, ceph-services, and opsmgr.  Swift is configured as
+part of os-services. See the README files of each project to determine how these
+projects are configured.  The configuration of Swift is described below in
+the section Swift Installation and Customization.
 
 The final step is to invoke cluster-create.sh in the os-services
 repository to install and configure the cluster.  os-services orchestrates
