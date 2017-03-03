@@ -61,13 +61,14 @@ which are loaded into the first controller that is setup by cluster-genesis.
 
 The OpenStack dashboard may be reached through your browser:
 
-https://<ipaddr or hostname of an OpenStack control node>
+https://<ipaddr from external-floating-ipaddr in the config.yaml>
 
 This recipe also includes an operational management console which is
 integrated into the OpenStack dashboard.  It monitors the cloud infrastructure
 and shows metrics relates to the capacity, utilization, and health of the
 cloud infrastructure.  It may also be configured to generate alerts when
 components fail.  It is provided through the opsmgr repository.
+
 
 .. Hint::
    Only os-services must be configured before invoking create-cluster.  For
@@ -108,6 +109,8 @@ to the internet and management switch in the cluster to be configured.
 
 #. Validate the configuration file::
 
+   $ apt-get install python-pip
+   $ pip install pyyaml
    $ git clone git://github.com/open-power-ref-design/os-services
    $ cd os-services
    $ git checkout $TAG
@@ -126,10 +129,13 @@ to the internet and management switch in the cluster to be configured.
 
 #. Wait for cluster-genesis to complete, ~3 hours:
 
-#. Edit the OpenStack and Swift configuration files:
+#. Edit the OpenStack configuration files:
 
-   Instructions may be found below in the section titled
-   Swift Installation and Customization.
+   Instructions for general OpenStack configuration may be found below in the section
+   titled Manual configuration of OpenStack-Ansible parameters.
+
+   Instructions for Swift configuration may be found below
+   in the section titled Swift Installation and Customization.
 
 #. Invoke the toolkit again to complete the installation::
 
@@ -139,6 +145,32 @@ to the internet and management switch in the cluster to be configured.
    listed above are invoked on the deployer node.  When cluster-genesis completes,
    it displays on the screen instructions for invoking the command above on
    the just provisioned first controller node.
+
+
+Manual configuration of OpenStack-Ansible parameters
+----------------------------------------------------
+
+Manual configuration is required to integrate the cloud that is being created
+into your data center. The following list represents some of the items that
+need to be configured. Consult your OpenStack-Ansible documentation for a
+complete list of parameters that need to be set::
+
+    > Configure SSL Certificates
+    > Reserve a set of IP Addresses that OpenStack should not allocate
+    > Allocate IP Address Range for expansion of controller, storage, and compute nodes
+    > Allocate a set of IP Addresses for OpenStack Trove to use
+    > Setting a unique VRRP ID for keepalived for network high availability
+
+Be sure to consult with your data center administrator for site specific
+policies regarding the use of SSL Certificates and floating external IP
+addresses as well as the selection of a unique VRRP ID within the data
+center. There is a lot of documentation related to OpenStack networking
+(Neutron) that is available on the internet. The following topics
+may be searched online to find more information::
+
+    > Legacy networking with Linux bridges
+    > High Availability using VRRP (L3HA) with Linux bridges
+    > Provider networks with Linux bridges
 
 
 Swift Installation and Customization
