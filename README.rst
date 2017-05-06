@@ -8,9 +8,9 @@ General information about Openstack Nova can be found at:
 
 This repository provides the following:
 
-    - `Bill of Materials (also used for DBaaS) <https://github.com/open-power-ref-design/dbaas/blob/master/dbaas.pdf>`_
-    - `Deployment configuration file for private compute cloud <https://github.com/open-power-ref-design/private-compute-cloud/blob/master/private-cloud.yml>`_
-    - `Deployment configuration file for private compute cloud w/swift <https://github.com/open-power-ref-design/private-compute-cloud/blob/master/private-cloud-with-swift-small.yml>`_
+    - `Bill of Materials <https://github.com/open-power-ref-design/private-compute-cloud/blob/master/docs/bom.pdf>`_
+    - `Deployment configuration file for private compute cloud <https://github.com/open-power-ref-design/private-compute-cloud/blob/master/config.yml>`_
+    - `Deployment configuration file for private compute cloud w/swift <https://github.com/open-power-ref-design/private-compute-cloud/blob/master/config-with-swift.yml>`_
 
 The Bill of Materials document provides a description and representation of
 a Private Compute Cloud
@@ -83,7 +83,7 @@ Getting Started
 The toolkit runs on an Ubuntu 16.04 OpenPOWER server or VM that is connected
 to the internet and management switch in the cluster to be configured.
 
-#. Read the `Bill of Materials (also used for DBaaS) <https://github.com/open-power-ref-design/dbaas/blob/master/dbaas.pdf>`_
+#. Read the `Bill Of Materials <https://github.com/open-power-ref-design/private-compute-cloud/blob/master/docs/bom.pdf>`_
 
 #. Choose a deployment configuration file w/ or w/o Swift
 
