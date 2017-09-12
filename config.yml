@@ -36,7 +36,7 @@ port-mgmt-data-network:
 ipaddr-mgmt-switch:
     rack1: 192.168.16.20
 cidr-mgmt-switch-external-dev: 192.168.32.2/24
-paddr-mgmt-switch-external:
+ipaddr-mgmt-switch-external:
     rack1: 192.168.32.20
 ipaddr-data-switch:
     rack1:
